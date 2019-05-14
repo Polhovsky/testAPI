@@ -1,7 +1,7 @@
 from flask import Flask, request
 
 app = Flask(__name__)
-
+api = Api(app)
 @app.route("/", methods = ['POST'])
 def predict():
 
