@@ -6,7 +6,7 @@ api = Api(app)
 
 @app.route("/", methods = ['GET', 'POST'])
 def predict():
-	if request.method == 'POST':
+    if request.method == 'POST':
         input_data = request.get_json()
         return '{"score":' + str(2 * float(input_data['data'])) + '}'
     else:
